@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>ניתוח עסקה – {{address}}</title>
+    <style>
+        body { font-family: Arial, sans-serif; direction: rtl; padding: 40px; background-color: #f9f9f9; }
+        h1 { color: #2e6c80; }
+        .section { background-color: #ffffff; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+        .section h2 { color: #1a4d6b; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
+        .comp-container { margin: 10px 0 20px 0; padding: 10px; background-color: #f1f1f1; border-radius: 6px; }
+        .row { margin: 5px 0; }
+        .label { font-weight: bold; display: inline-block; width: 230px; color: #333; vertical-align: top; }
+        .value { display: inline-block; color: #000; }
+    </style>
+</head>
+<body>
+    <h1>ניתוח עסקה – {{address}}</h1>
+
+    <div class="section">
+        <h2>פרטי עסקה</h2>
+        <div class="row"><span class="label">ZIP:</span><span class="value">{{zip}}</span></div>
+        <div class="row"><span class="label">מחיר מבוקש:</span><span class="value">{{asking_price}}</span></div>
+        <div class="row"><span class="label">ARV:</span><span class="value">{{arv}}</span></div>
+        <div class="row"><span class="label">עלות שיפוץ:</span><span class="value">{{rehab_cost}}</span></div>
+        <div class="row"><span class="label">הוצאות נלוות:</span><span class="value">{{other_costs}}</span></div>
+        <div class="row"><span class="label">All-In:</span><span class="value">{{all_in}}</span></div>
+        <div class="row"><span class="label">Refinance:</span><span class="value">{{refinance}}</span></div>
+        <div class="row"><span class="label">הון עצמי תקוע:</span><span class="value">{{equity_stuck}}</span></div>
+    </div>
+
+    <div class="section">
+        <h2>החזר על ההשקעה</h2>
+        <div class="row"><span class="label">ROI Flip:</span><span class="value">{{roi_flip}}</span></div>
+        <div class="row"><span class="label">ROI Rent:</span><span class="value">{{roi_rent}}</span></div>
+    </div>
+
+    <div class="section">
+        <h2>נתוני שכירות וסביבה</h2>
+        <div class="row"><span class="label">שכירות חודשית:</span><span class="value">{{rent}}</span></div>
+        <div class="row"><span class="label">Crime:</span><span class="value">{{crime}}</span></div>
+        <div class="row"><span class="label">Flood:</span><span class="value">{{flood}}</span></div>
+        <div class="row"><span class="label">בתי ספר:</span><span class="value">{{schools}}</span></div>
+        <div class="row"><span class="label">DOM:</span><span class="value">{{dom}}</span></div>
+        <div class="row"><span class="label">מגמות הגירה:</span><span class="value">{{migration}}</span></div>
+        <div class="row"><span class="label">שוק מקומי:</span><span class="value">{{market_trend}}</span></div>
+        <div class="row"><span class="label">תחרות:</span><span class="value">{{competition}}</span></div>
+    </div>
+
+    <div class="section">
+        <h2>קומפסים</h2>
+        {{comps_block}}
+        <p style="color: #777; font-size: 13px; margin-top: 10px;">
+            סה"כ {{total_comps}} קומפסים אותרו ב-ZIP {{zip}} בחצי השנה האחרונה. מוצגים כאן שלושת הקרובים ביותר.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>סטטוס</h2>
+        <div class="row"><span class="label">האם העסקה מאושרת:</span><span class="value">{{approved}}</span></div>
+        <div class="row"><span class="label">פוטנציאל רווח פליפ:</span><span class="value">{{profit_flip}}</span></div>
+        <div class="row"><span class="label">פוטנציאל רווח BRRR:</span><span class="value">{{profit_brrr}}</span></div>
+    </div>
+
+    <div class="section">
+        <h2>סיכום והערות</h2>
+        <div class="row"><span class="value">{{notes}}</span></div>
+    </div>
+
+    <div class="section">
+        <h2>תמונות הנכס</h2>
+        <div class="row">
+            <span class="label">לצפייה:</span>
+            <span class="value">
+                {% if photos_link %}
+                    <a href="{{photos_link}}" target="_blank">פתח תיקיית תמונות</a>
+                {% else %}
+                    לא סופק קישור לתמונות
+                {% endif %}
+            </span>
+        </div>
+    </div>
+</body>
+
+</html>
