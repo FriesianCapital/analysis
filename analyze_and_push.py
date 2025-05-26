@@ -4,6 +4,7 @@ import pandas as pd
 import os
 from jinja2 import Template
 import subprocess
+from input_adapter import adapt_input
 
 # Load the CSV
 data = pd.read_csv("deal_files.csv")
@@ -13,23 +14,20 @@ with open("template.html", "r", encoding="utf-8") as f:
     template_html = f.read()
 template = Template(template_html)
 
-# Load adapter
-from input_adapter import adapt_input
-
 # Create HTML files
 summary = []
 for _, row in data.iterrows():
     context = adapt_input(row)
     filename = f"{context['id']}.html"
-    html_path = filename  # HTML יישמר ישירות בשורש
+    html_path = filename  # Save directly to repo root
     with open(html_path, "w", encoding="utf-8") as f:
         f.write(template.render(**context))
     url = f'https://friesiancapital.github.io/analysis/{filename}'
     summary.append({
-        "ID": context["id"],
+        "כתובת": context["id"],
         "ציון": context["score"],
         "ניתוח מלא": f'=HYPERLINK("{url}", "צפה")',
-        "כתובת": context["address"],
+        "כתובת מלאה": context["address"],
         "מחיר מבוקש": context["asking_price"],
         "All-In": context["all_in"],
         "ARV": context["arv"],
