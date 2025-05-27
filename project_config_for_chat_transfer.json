@@ -1,0 +1,41 @@
+{
+  "server": {
+    "status": "active",
+    "ip": "91.99.12.46",
+    "hostname": "realestateanalyzer"
+  },
+  "github": {
+    "access": false,
+    "token_stored": false,
+    "notes": "GitHub integration removed for security."
+  },
+  "google": {
+    "gmail": "friesiancapital@gmail.com",
+    "sheets_connected": false,
+    "drive_connected": false
+  },
+  "vision_api": {
+    "enabled": false,
+    "provider": null,
+    "api_key": null
+  },
+  "bundle": "real_estate_bundle.zip",
+  "data_sources": {
+    "propstream": "not_connected",
+    "zillow": "read_only",
+    "redfin": "read_only"
+  },
+  "output_format": {
+    "columns": [
+      "כתובת",
+      "מחיר מבוקש",
+      "All-In",
+      "ARV",
+      "ROI Flip",
+      "ROI Rent",
+      "הון עצמי תקוע",
+      "ציון",
+      "ניתוח מלא (HTML)"
+    ]
+  }
+}

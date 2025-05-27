@@ -1,0 +1,58 @@
+{
+    "GitHub": {
+        "username": "friesiancapital",
+        "repo": "analysis",
+        "url": "https://github.com/friesiancapital/analysis",
+        "token": "__SECRET__"
+    },
+    "VPS": {
+        "status": "not opened",
+        "ip": "__SECRET__",
+        "root_password": "__SECRET__",
+        "provider": "Hetzner or DigitalOcean"
+    },
+    "Google": {
+        "gmail": "friesiancapital@gmail.com",
+        "sheets_connected": false,
+        "drive_setup": false
+    },
+    "Vision_API": {
+        "active": false,
+        "provider": "",
+        "api_key": "__SECRET__"
+    },
+    "Files": [
+        "template.html",
+        "analyze_and_push.py",
+        "input_adapter.py",
+        "deal_files.csv",
+        "Copy of \u05de\u05d5\u05d3\u05d5\u05dc\u05d9\u05dd \u05e7\u05d5\u05d1\u05e5 18.docx"
+    ],
+    "Test_Deal": "98 Strawberry Hl, Rittman, OH 44270",
+    "Repo_Access": {
+        "github_desktop": true,
+        "repo_access": true,
+        "local_machine_access": true
+    },
+    "Open_Points": [
+        "Open VPS",
+        "Set up Google Drive",
+        "Activate Vision API"
+    ],
+    "Data_Sources": {
+        "propstream": false,
+        "zillow": true,
+        "redfin": true
+    },
+    "Output_Format": [
+        "Address",
+        "Asking Price",
+        "All-In",
+        "ARV",
+        "ROI Flip",
+        "ROI Rent",
+        "Equity Left",
+        "Score",
+        "Full Analysis Link"
+    ]
+}
