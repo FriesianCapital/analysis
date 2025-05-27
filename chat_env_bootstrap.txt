@@ -1,0 +1,8 @@
+# Chat Environment Bootstrap
+project_name = "Real Estate Deal Analysis"
+active_modules = ["repair_estimator", "csv_batch_analysis", "html_report_generator"]
+required_files = ["project_config_for_chat_transfer.json", "task_status_master.csv", "transition_guide.md"]
+default_output_folder = "output/"
+data_sources = ["Zillow", "Redfin", "Manual CSV Upload"]
+status = "Ready for chat continuation"
+master_file_list_file = "master_files_list.txt"

@@ -1,0 +1,32 @@
+
+def adapt_input(row):
+    return {
+        "id": row["ID"],
+        "address": row["full_address"],
+        "zip": row["zip"],
+        "asking_price": row["asking_price"],
+        "arv": row["arv"],
+        "rehab_cost": row["rehab_cost"],
+        "other_costs": row["other_cost"],
+        "all_in": row["all_in"],
+        "refinance": row["refinance"],
+        "equity_stuck": row["equity_stuck"],
+        "roi_flip": row["roi_flip"],
+        "roi_rent": row["roi_rent"],
+        "score": row["score"],
+        "crime": row.get("crime", ""),
+        "flood": row.get("flood", ""),
+        "rent": row.get("rent", ""),
+        "schools": row.get("schools", ""),
+        "dom": row.get("dom", ""),
+        "migration": row.get("migration", ""),
+        "market_trend": row.get("market_trend", ""),
+        "competition": row.get("competition", ""),
+        "comps_block": row.get("comps_block", ""),
+        "total_comps": row.get("total_comps", ""),
+        "approved": row.get("approved", ""),
+        "profit_flip": row.get("profit_flip", ""),
+        "profit_brrr": row.get("profit_brrr", ""),
+        "notes": row.get("notes", ""),
+        "photos_link": row.get("photos_link", "")
+    }

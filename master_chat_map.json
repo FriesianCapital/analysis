@@ -1,0 +1,41 @@
+{
+    "chat_pipeline": {
+        "name": "Pipeline Processor",
+        "description": "Handles CSV > HTML > Score processing",
+        "related_tasks": [
+            "csv_import",
+            "html_generation",
+            "scoring"
+        ],
+        "active": true
+    },
+    "chat_api_scraper": {
+        "name": "API & Scraper",
+        "description": "Handles Zillow, Redfin scraping and external API integrations",
+        "related_tasks": [
+            "zillow_scrape",
+            "gpt_api_integration"
+        ],
+        "active": true
+    },
+    "chat_team_ops": {
+        "name": "Team & Platform Ops",
+        "description": "Handles GitHub access, user roles, VPS, and Google integrations",
+        "related_tasks": [
+            "github_setup",
+            "vps_access",
+            "google_integration"
+        ],
+        "active": true
+    },
+    "chat_strategy": {
+        "name": "Startup Strategy",
+        "description": "Handles startup planning, MVP, pricing models, scaling",
+        "related_tasks": [
+            "mvp_design",
+            "pricing",
+            "business_model"
+        ],
+        "active": true
+    }
+}
